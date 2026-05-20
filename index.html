@@ -52,19 +52,35 @@
           </div>
         </div>
 
-        <div class="signal-panel" aria-label="LookingGlass AI Pro status panel">
-          <div class="aperture-card">
+        <div class="hero-form-panel" id="contact-form" aria-labelledby="contact-title">
+          <div class="form-head">
             <img src="/assets/aipro-symbol-512.png" alt="" />
-            <div class="scan-line"></div>
+            <div>
+              <p class="eyebrow">Start a conversation</p>
+              <h2 id="contact-title">Tell us what you're trying to sort out.</h2>
+            </div>
           </div>
-          <div class="status-card">
-            <span>Status</span>
-            <strong>Website rebuild in progress</strong>
-          </div>
-          <div class="status-card small">
-            <span>Method</span>
-            <strong>Clarity before execution</strong>
-          </div>
+
+          <form class="contact-form" data-contact-form>
+            <label>
+              <span>Name</span>
+              <input name="name" type="text" autocomplete="name" required />
+            </label>
+            <label>
+              <span>Work email</span>
+              <input name="email" type="email" autocomplete="email" required />
+            </label>
+            <label>
+              <span>Company</span>
+              <input name="company" type="text" autocomplete="organization" />
+            </label>
+            <label>
+              <span>What should we talk about?</span>
+              <textarea name="message" rows="4" required></textarea>
+            </label>
+            <button class="button primary" type="submit">Save my note</button>
+            <p class="form-status" data-form-status aria-live="polite"></p>
+          </form>
         </div>
       </section>
 
@@ -103,38 +119,6 @@
         </div>
       </section>
 
-      <section class="form-band" id="contact-form" aria-labelledby="contact-title">
-        <div class="form-copy">
-          <p class="eyebrow">Start a conversation</p>
-          <h2 id="contact-title">Tell us what you're trying to sort out.</h2>
-          <p>
-            Share a little context and we'll use it to prepare for the first
-            conversation. This temporary form is for the coming-soon page while
-            the full site is rebuilt.
-          </p>
-        </div>
-
-        <form class="contact-form" data-contact-form>
-          <label>
-            <span>Name</span>
-            <input name="name" type="text" autocomplete="name" required />
-          </label>
-          <label>
-            <span>Work email</span>
-            <input name="email" type="email" autocomplete="email" required />
-          </label>
-          <label>
-            <span>Company</span>
-            <input name="company" type="text" autocomplete="organization" />
-          </label>
-          <label>
-            <span>What should we talk about?</span>
-            <textarea name="message" rows="5" required></textarea>
-          </label>
-          <button class="button primary" type="submit">Save my note</button>
-          <p class="form-status" data-form-status aria-live="polite"></p>
-        </form>
-      </section>
     </main>
     <script>
       const form = document.querySelector("[data-contact-form]");
