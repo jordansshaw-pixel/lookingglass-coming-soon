@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 140" role="img" aria-label="LookingGlassAIPro lockup">
+      <g transform="translate(0 10)">
+      <circle cx="60" cy="60" r="52" fill="none" stroke="#0F6E56" stroke-width="0.6" stroke-opacity="0.35"></circle>
+      <path d="M 10.00 60.00 Q 44.68 40.88 62.40 49.27 L 60.00 10.00 A 50 50 0 0 0 10.00 60.00 Z" fill="#0F6E56"></path><path d="M 60.00 110.00 Q 40.88 75.32 49.27 57.60 L 10.00 60.00 A 50 50 0 0 0 60.00 110.00 Z" fill="#0F6E56"></path><path d="M 110.00 60.00 Q 75.32 79.12 57.60 70.73 L 60.00 110.00 A 50 50 0 0 0 110.00 60.00 Z" fill="#0F6E56"></path><path d="M 60.00 10.00 Q 79.12 44.68 70.73 62.40 L 110.00 60.00 A 50 50 0 0 0 60.00 10.00 Z" fill="#0F6E56"></path>
+      
+      
+    </g>
+      <g transform="translate(146 22)">
+        <g font-family="DM Sans, system-ui, sans-serif" font-weight="500" letter-spacing="-0.025em">
+          <text x="0" y="52.080000000000005" fill="#F5F3EF" font-size="56">LookingGlass</text>
+          <g transform="translate(333.2 10.64)">
+            <rect x="0" y="0" width="51.52" height="38.080000000000005" rx="4.48" fill="none" stroke="#EF9F27" stroke-width="1.68"></rect>
+            <text x="25.76" y="28.179200000000005" fill="#EF9F27" font-size="38.080000000000005" text-anchor="middle" letter-spacing="0.02em" font-weight="700">AI</text>
+          </g>
+          <text x="390.88" y="52.080000000000005" fill="#F5F3EF" font-size="56">Pro</text>
+        </g>
+      </g>
+    </svg>
