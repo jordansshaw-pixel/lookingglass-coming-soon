@@ -72,6 +72,14 @@ a {
   color: var(--amber);
 }
 
+.method-line {
+  margin: -8px 0 18px;
+  color: rgba(245, 243, 239, 0.74);
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+}
+
 h1,
 h2,
 h3,
