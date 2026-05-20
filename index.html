@@ -47,9 +47,7 @@
           </p>
 
           <div class="actions" aria-label="Primary actions">
-            <a class="button primary" href="mailto:jordan@lookingglassaipro.com">
-              Start a conversation
-            </a>
+            <a class="button primary" href="#contact-form">Start a conversation</a>
             <a class="button secondary" href="#what-we-do">What we do</a>
           </div>
         </div>
@@ -104,6 +102,56 @@
           </article>
         </div>
       </section>
+
+      <section class="form-band" id="contact-form" aria-labelledby="contact-title">
+        <div class="form-copy">
+          <p class="eyebrow">Start a conversation</p>
+          <h2 id="contact-title">Tell us what you're trying to sort out.</h2>
+          <p>
+            Share a little context and we'll use it to prepare for the first
+            conversation. This temporary form is for the coming-soon page while
+            the full site is rebuilt.
+          </p>
+        </div>
+
+        <form class="contact-form" data-contact-form>
+          <label>
+            <span>Name</span>
+            <input name="name" type="text" autocomplete="name" required />
+          </label>
+          <label>
+            <span>Work email</span>
+            <input name="email" type="email" autocomplete="email" required />
+          </label>
+          <label>
+            <span>Company</span>
+            <input name="company" type="text" autocomplete="organization" />
+          </label>
+          <label>
+            <span>What should we talk about?</span>
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+          <button class="button primary" type="submit">Save my note</button>
+          <p class="form-status" data-form-status aria-live="polite"></p>
+        </form>
+      </section>
     </main>
+    <script>
+      const form = document.querySelector("[data-contact-form]");
+      const status = document.querySelector("[data-form-status]");
+
+      form?.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const data = Object.fromEntries(new FormData(form).entries());
+        const saved = JSON.parse(localStorage.getItem("lookingglass-contact-notes") || "[]");
+        saved.push({ ...data, savedAt: new Date().toISOString() });
+        localStorage.setItem("lookingglass-contact-notes", JSON.stringify(saved));
+        form.reset();
+        if (status) {
+          status.textContent =
+            "Saved in this browser for now. We will connect this form to the intake system next.";
+        }
+      });
+    </script>
   </body>
 </html>
